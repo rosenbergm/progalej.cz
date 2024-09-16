@@ -1,0 +1,155 @@
+{% extends "base.html" %} {%block title%} progalej.cz {%endblock%} {% block
+content %}
+<main class="col">
+  <section class="small">
+    <h1>semináře programování na Gymnáziu nad Alejí</h1>
+  </section>
+  <section class="button-container">
+    <button>
+      <a href="/pgu"> PgU (začátečníci) </a>
+    </button>
+    <button>
+      <a href="/pg"> Pg (pokročilí) </a>
+    </button>
+  </section>
+
+  <div class="search-container">
+    <input id="search" type="search" placeholder="🔎 Hledat" />
+
+    <div class="search-results">
+      <div class="search-results__items"></div>
+    </div>
+  </div>
+
+  <section>
+    <p>
+      vítejte! tady najdete veškeré informace ohledně studia seminářů Pg a PgU
+      na Gymnáziu nad Aleji. na podstránky se dostanete prokliky nahoře. tam
+      budou <b>zadávané úkoly</b> a <b>zveřejňované zápisky z hodin</b>.
+    </p>
+
+    <p>
+      kde mě najdete? <strong>kabinet 110</strong> (čtvrtky mezi 11 a 16:30)
+    </p>
+    <p>kam máte psát? <strong>martin.rosenberg (zavináč) alej.cz</strong></p>
+
+    <p>
+      konzultace bez předchozí dohody jsou možné, v časech, které jsou
+      podmnožinou intervalu zmíněného nahoře, ale zároveň disjunktní s časem,
+      kdy učím. o konzultace mimo tento čas (nebo konzultace delší) prosím pište
+      na e-mail.
+    </p>
+  </section>
+  <section>
+    <h2>pravidla hry</h2>
+
+    <p>
+      rád bych, abychom se na seminářích nepobili, abyste si něco odnesli a já
+      abych si neodnesl šrámy na duši. proto si prosím přečtěte těchto pár bodů,
+      které vás s průběhem semináře seznámí.
+    </p>
+
+    <h3>pravidlo první — komunikace</h3>
+
+    <p>
+      pokud budete mít v průběhu roku nějaký technický problém, jako první
+      konzultujte google či jiná vyhledávátka. je důležité se s vyhledávači
+      naučit a obecně se říká, že práce programátora je z velké části googlení.
+      to může být pravda u některých, ale v obecnosti to tak není, je potřeba i
+      přemýšlet. přesto prosím první googlete a až poté se ptejte mě (platí
+      hlavně pro maily).
+    </p>
+
+    <p>
+      pokud se budete cítit ztracení nebo nebudete bude stíhat (z jakéhokoli
+      důvodu), <b>ozvěte se</b>. seminář bude určitě pro některé z vás velmi
+      náročný, pro některé naprostá pohodička, ale to neznamená, že chci, abyste
+      se topili. takže <b>pište, piště, piště</b>. kamkoli, ale ideálně na můj
+      školní mail.<br /><br />
+
+      pokud budete mít jakýkoli jiný problém, co se vašeho studia týče, máte ve
+      škole (doufám) hodně kanálů, jak ho řešit. třídní, zástupce ředitele (což
+      je i výchovný poradce pro vyšší gymnázium a je moc fajn), ale jestli
+      chcete problém řešit přímo se mnou a přijdu vám jako nejvíce safe člověk
+      se kterým to probrat, určitě se neváhejte ozvat.
+    </p>
+
+    <h3>pravidlo druhé — používání AI a LLM nástrojů</h3>
+
+    <p>
+      nástroje jako ChatGPT a Claude <b>nejsou výslovně zakázané</b>, ale chci,
+      abyste odpovědi rozuměli. <b>vždycky</b>
+      chci, abyste odpovědi umělé inteligenci oponovali a snažili se z ní
+      vymáčknout co nejlepší odpověď, kterou budete
+      <b>chápat</b>. pokud odpovědi (nebo části odpovědi) nerozumíte, klidně se
+      mě zeptejte. pokud ale budete jen slepě kopírovat výstupy z ChatGPT, tak
+      to poznám, pracuju s AI každý den.
+    </p>
+
+    <h3>pravidlo třetí — úkoly</h3>
+
+    <p>
+      úkoly prosím dělejte. máte na ně dostatek času. termín odevzdávání je vždy
+      <b>za skoro dva týdny od zadání (středa do 23:59)</b>. odevzdávejte ale
+      kdykoli, a to z jednoduchého důvodu.<br /><br />
+      funguje u mě <b>iterativní opravování</b>. pokud odevzdáte úkol, co
+      nejdřív se na něj podívám a ohodnotím ho v takovém stavu, jakém je. pokud
+      nedostanete plný počet bodů, můžete se pokusit o opravu. většinou poskytnu
+      i malou nápovědu.
+    </p>
+
+    <h3>pravidlo čtvrté — spolupráce</h3>
+
+    <p>
+      v praxi se o problémech, které řešíte, budete se svými kolegy bavit pořád.
+      <b>i tady můžete spolupracovat</b>, ale s jednou podmínkou. pokud budete
+      spolupracovat, <b>piště řešení každý sám</b>. jestli dostanu odevzdaná dvě
+      velice podobná řešení, hrozí vám celá škála postihů, ten nejmírnější je
+      neschopnost zíkat lepší než známku (3) ze semináře. ten nejhorší je (N) na
+      vysvědčení a tudíž i nemožnost skládat maturitu z informatiky.
+    </p>
+  </section>
+  <section>
+    <h2>známkování</h2>
+
+    <p>
+      to bude pro oba semináře jednotné. školní rok bude rozdělený do období, za
+      které budete získávat body. ty se poté přepočítají na známky následovně:
+    </p>
+
+    <ul>
+      <li>
+        <p>>85 % bodů — (1)</p>
+      </li>
+      <li>
+        <p>>75 % bodů — (2)</p>
+      </li>
+      <li>
+        <p>>60 % bodů — (3)</p>
+      </li>
+      <li>
+        <p>>50 % bodů — (4)</p>
+      </li>
+      <li>
+        <p>jinak — (5)</p>
+      </li>
+    </ul>
+
+    <p>
+      body půjdou získat více způsoby. ty hlavní jsou <b>úkoly</b>. na každé
+      hodině se bude psát <b>malá písemka</b>
+      (malá protože za ní bude málo bodů), která slouží jednak pro osvěžení
+      znalostí z minula a zároveň jako jednoduchá možnost na získání extra
+      bodíků.
+    </p>
+
+    <p>
+      také budou extra možnosti za extra body. řešení úloh ze soutěže Kasiopea
+      nebo těžké úkoly (buď matematické nebo algoritmicko-programovací), které
+      budou znalostně nad rámec semináře, ale pamatujte, že i snaha se počítá.
+      zároveň můžete napsat prográmek s dokumentací, za který dostanete nějaké
+      bodíky.
+    </p>
+  </section>
+</main>
+{% endblock content %}

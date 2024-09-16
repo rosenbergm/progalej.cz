@@ -1,0 +1,458 @@
+* {
+    font-family: "Archivo", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: normal;
+    font-style: normal;
+    font-variation-settings: "wdth" 100;
+
+    box-sizing: border-box;
+}
+
+pre, code, code * {
+    font-family: "JetBrains Mono", monospace;
+
+    font-size: 1rem;
+}
+
+pre {
+    padding: .5rem 1rem;
+    margin: .5rem 0;
+
+    table,
+    th,
+    td {
+        border: none;
+    }
+
+    th {
+        text-align: unset;
+
+        padding: none;
+        font-weight: unset;
+    }
+
+    td {
+        padding: none;
+    }
+}
+
+pre {
+  padding: 1rem;
+  overflow: auto;
+}
+/* The line numbers already provide some kind of left/right padding */
+pre[data-linenos] {
+  padding: 1rem 0;
+}
+pre table td {
+  padding: 0;
+}
+/* The line number cells */
+pre table td:nth-of-type(1) {
+  text-align: center;
+  user-select: none;
+}
+pre mark {
+  /* If you want your highlights to take the full width */
+  display: block;
+  /* The default background colour of a mark is bright yellow */
+  background-color: rgba(254, 252, 232, 0.9);
+}
+pre table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+b,
+strong {
+    font-weight: 600;
+}
+
+i {
+    font-style: italic;
+}
+
+html {
+    font-size: 16px;
+
+    height: 100%;
+    color: #000;
+}
+
+body {
+    padding: 8rem 1rem 4rem;
+    margin: 0;
+
+    min-height: 100%;
+
+    background: #fff;
+
+    display: grid;
+    // align-items: center;
+
+    grid-template-columns: 1fr Min(calc(80ch), calc(100%)) 1fr;
+}
+
+main {
+    display: flex;
+    align-items: stretch;
+    flex-direction: column;
+    gap: 1.5rem;
+
+    grid-column: 2;
+
+    h1,
+    p {
+        margin: 0;
+        padding: 0;
+
+        color: #000;
+    }
+
+    h1 {
+        font-size: 2.5rem;
+        line-height: 90%;
+    }
+
+    h2 {
+        margin: 0;
+        line-height: 0;
+
+        font-size: 1.8rem;
+        line-height: 100%;
+    }
+
+    h3 {
+        margin: 0;
+        line-height: 0;
+
+        font-weight: bolder;
+        font-size: 1.3rem;
+        line-height: 100%;
+        letter-spacing: -0.02em;
+    }
+
+    p {
+        letter-spacing: 0.03em;
+        font-size: 1rem;
+
+        text-align: justify;
+    }
+
+    img#me {
+        width: 100%;
+
+        object-fit: cover;
+        aspect-ratio: 1;
+    }
+
+    section {
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+
+        width: 100%;
+
+        &.small {
+            gap: 1rem;
+        }
+    }
+}
+
+main.col {
+    flex-direction: column;
+}
+
+@media screen and (min-width: 20rem) {
+    main {
+        flex-direction: column;
+    }
+
+    // body.big {
+    //   grid-template-columns: 1fr Min(calc(40ch), calc(100%)) 1fr;
+    // }
+}
+
+@media screen and (min-width: 40ch) {
+    // body.big {
+    //   grid-template-columns: 1fr Min(calc(70ch), calc(100%)) 1fr;
+    // }
+
+    main p {
+        font-size: 1.2rem;
+    }
+
+    a {
+        font-size: 1.2rem;
+    }
+
+    ul {
+        font-size: 1.2rem;
+        line-height: 120%;
+    }
+
+    main dl,
+    dt,
+    dd {
+        font-size: 1.2rem;
+    }
+}
+
+@media screen and (min-width: 130ch) {
+    body {
+        padding: 8rem 1rem 4rem;
+        grid-template-columns: 1fr Min(calc(80ch), calc(100%)) 1fr;
+    }
+
+    // body.big {
+    //   grid-template-columns: 1fr Min(calc(130ch), calc(100%)) 1fr;
+    // }
+
+    main {
+        flex-direction: row;
+    }
+
+    main h1 {
+        font-size: 4rem;
+    }
+}
+
+.links {
+    display: flex-wrap;
+    flex-direction: row;
+    gap: 1rem;
+
+    a {
+        margin-right: 1rem;
+    }
+}
+
+a {
+    text-decoration: underline;
+    text-decoration-style: dashed;
+
+    color: #000;
+
+    transition: all;
+}
+
+a:hover {
+    color: #000;
+}
+
+article {
+    p {
+        letter-spacing: 0.01em;
+        font-size: 1.2rem;
+        margin-bottom: 0.5rem;
+        text-align: justify;
+    }
+
+    dl,
+    dt,
+    dd {
+        text-align: justify;
+    }
+
+    h2 {
+        margin: 1rem 0 0.6rem;
+    }
+
+    h3 {
+        margin: 1rem 0 0.6rem;
+    }
+}
+
+section.cv {
+    p {
+        margin-bottom: 0.2rem;
+    }
+}
+
+ul {
+    margin: 0 0 0 1rem;
+    padding: 0;
+}
+
+time {
+    opacity: 0.5;
+    font-family: "Courier New", Courier, monospace;
+
+    font-size: 1rem;
+
+    display: inline-block;
+
+    margin-bottom: 1rem;
+}
+
+.pride {
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+
+    height: 3rem;
+    width: 3rem;
+
+    user-select: none;
+
+    opacity: 0;
+}
+
+.pride:hover {
+    opacity: 1;
+}
+
+.button-container {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+
+    align-items: center;
+    justify-content: stretch;
+
+    button {
+        all: unset;
+
+        display: flex;
+        flex: 1;
+
+        align-items: center;
+        justify-content: center;
+
+        height: 3rem;
+
+        border: 1px solid #000;
+
+        cursor: pointer;
+
+        a {
+            height: 100%;
+            width: 100%;
+
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        &:hover {
+            background-color: #000;
+
+            * {
+                color: #fff;
+            }
+        }
+    }
+}
+
+table,
+th,
+td {
+    border: 1px solid #000;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+th {
+    text-align: left;
+
+    padding: 0.5rem;
+    font-weight: 500;
+}
+
+td {
+    padding: 0.5rem;
+}
+
+.pagelink {
+    time {
+        margin: 0;
+    }
+}
+
+.search-container {
+  display: inline-block;
+  position: relative;
+  width: 100%;
+
+  input {
+    width: 100%;
+    padding: 0.5rem;
+
+    border: 1px solid black;
+
+    font-size: 1rem;
+    letter-spacing: 0.03em;
+    font-weight: 400;
+  }
+}
+
+.search-results {
+  display: none;
+  position: absolute;
+  background: white;
+  color: black;
+  padding: 1rem;
+  box-shadow: 2px 2px 2px 0 rgba(0, 0, 0, 0.5);
+  max-height: 500px;
+  overflow: auto;
+  width: 100%;
+  right: 0;
+
+  &__items {
+    list-style: none;
+  }
+
+  li {
+    margin-top: 1rem;
+    border-bottom: 1px solid #ccc;
+    font-size: 1rem;
+
+    &:first-of-type {
+      margin-top: 0;
+    }
+  }
+
+  &__item {
+    margin-bottom: 1rem;
+
+    a {
+      font-size: 1.2rem;
+      display: inline-block;
+      margin-bottom: 0.5rem;
+    }
+  }
+}
+
+.page-header-search {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+
+    gap: 1rem;
+
+    .search-container {
+        width: 100%;
+    }
+
+    .search-results {
+        width: 100%;
+    }
+}
+
+@media screen and (min-width: 40ch) {
+    .page-header-search {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+
+        .search-container {
+            max-width: 300px;
+        }
+
+        .search-results {
+            width: 150%;
+        }
+    }
+}

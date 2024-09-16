@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="cs">
+
+<head>
+  <meta charset="utf-8">
+  <title>{% block title %} {% endblock %}</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="/style.css">
+
+  <meta name="description"
+    content="Informace a poznámky k seminářům progamování na Gymnáziu nad Alejí" />
+  <meta property="og:title" content="Programování - Gymnázium nad Alejí" />
+  <meta property="og:description"
+    content="Informace a poznámky k seminářům progamování na Gymnáziu nad Alejí" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://progalej.cz" />
+</head>
+
+<body {% if current_path=="/" %}class="big" {% endif %}>
+  {% block content %} {% endblock %}
+
+  <script
+    type="text/javascript"
+    src="{{ get_url(path='elasticlunr.min.js') }}"
+  ></script>
+  <script type="text/javascript" src="{{ get_url(path='search.js') }}"></script>
+</body>
+</html>
