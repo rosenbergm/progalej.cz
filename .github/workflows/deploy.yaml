@@ -1,0 +1,30 @@
+name: "deploy"
+
+# yamllint disable-line rule:truthy
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Cloning repo
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Install Zola
+        uses: taiki-e/install-action@v2
+        with:
+          tool: zola@0.19.1
+
+      - name: Build site with Zola
+        run: zola build -o dist
+
+      - name: Push to dokku
+        uses: dokku/github-action@master
+        with:
+          git_remote_url: ${{ secrets.GIT_REMOTE_URL }}
+          ssh_private_key: ${{ secrets.SSH_PRIVATE_KEY }}
