@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="cs">
+
+<head>
+  <meta charset="utf-8">
+  <title>Pg (pokročilí) -
+progalej.cz</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="/style.css">
+
+  <meta name="description"
+    content="Informace a poznámky k seminářům progamování na Gymnáziu nad Alejí" />
+  <meta property="og:title" content="Programování - Gymnázium nad Alejí" />
+  <meta property="og:description"
+    content="Informace a poznámky k seminářům progamování na Gymnáziu nad Alejí" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://progalej.cz" />
+</head>
+
+<body >
+  
+<main class="col">
+  <section class="small">
+    <div class="page-header-search">
+      <a href="/">← zpět</a>
+
+      <div class="search-container">
+        <input id="search" type="search" placeholder="🔎 Hledat" />
+
+        <div class="search-results">
+          <div class="search-results__items"></div>
+        </div>
+      </div>
+    </div>
+    <h1 class="title">Pg (pokročilí)</h1>
+  </section>
+  <section>
+    <ul>
+      
+      <li class="pagelink">
+        <time datetime="2024-09-12">2024-09-12</time>&nbsp;
+        <a href="https://progalej.cz/pg/02/">
+          Lekce 2 — HTML: důležité tagy, CSS
+        </a>
+      </li>
+      
+      <li class="pagelink">
+        <time datetime="2024-09-05">2024-09-05</time>&nbsp;
+        <a href="https://progalej.cz/pg/01/">
+          Lekce 1 — Úvodní informace
+        </a>
+      </li>
+      
+    </ul>
+  </section>
+  <section><h2 id="prerekvizity">prerekvizity</h2>
+<p>zaprvé je nutné vědět něco o tématech, co se probíraly na semináři PgU.
+<strong>není nutné</strong>, abyste v minulosti prošli seminářem PgU (sám jsem to tak
+udělal).</p>
+<p>ale pokud jste v životě neprogramovali nebo jste se
+nikdy v životě s informatikou nesetkali, není pro vás tento
+seminář bez absolvování PgU vhodný. pokud se někdo takový
+ale najde a přesto by chtěl na seminář přicházet, napište mi
+a probereme možnosti.</p>
+<h2 id="pozadavky-na-uspesne-zakonceni-predmetu">požadavky na úspěšné zakončení předmětu</h2>
+<p>platí společná pravidla napsaná <a href="/teaching">zde</a>. podtrženo
+sečteno musíte splnit následující:</p>
+<ul>
+<li>získat <strong>alespoň 50 % bodů</strong> (známkování naleznete <a href="/teaching">zde</a>)</li>
+<li><strong>ne</strong>podvádět, protože to vám může vysloužit (N) na vysvědčení. nedělějte to, nechce se mi to řešit.</li>
+<li>odevzdat maturitní práci splňující požadavky určené maturitní vyhláškou MŠMT v termínu určeném ředitelem školy.</li>
+</ul>
+<h3 id="kalendar-dulezitych-udalosti">kalendář důležitých událostí</h3>
+<table><thead><tr><th>Datum</th><th>Událost</th></tr></thead><tbody>
+<tr><td>2. září</td><td>Začátek školního roku</td></tr>
+<tr><td>1. listopadu</td><td>Schválené téma maturitní práce</td></tr>
+<tr><td>začátek dubna</td><td>Odevzdání maturitní práce</td></tr>
+<tr><td>konec dubna</td><td>Zpracování a rozeslání posudků</td></tr>
+<tr><td>koncem května</td><td>Maturitní zkouška</td></tr>
+</tbody></table>
+<h2 id="maturita">maturita</h2>
+<p>upozornění: <strong>v době maturitních zkoušek</strong> jsou tyto informace neoficiálního informativního charakteru. vždy konzultujte <a rel="noopener" target="_blank" href="https://www.alej.cz/studium/maturita/">školní web</a>.</p>
+<p>no, tohle je téma samo o sobě. hodně se tady toho objeví, až bude čas. zatím se ale <strong>musíte</strong> soustředit na dvě věci — <strong>výběr témata maturitní práce</strong> a <strong>opakování témat ze semináře PgU</strong>.</p>
+<p>téma mi odevzdejte do <strong>1. listopadu</strong> a to po konzultaci. prosím vás, promyslete to a pokud si nebudete čímkoliv jisti (náročností tématu, nejistotou, apod.), napište mi.</p>
+<p>předběžné materiály k maturitní zkoušce:</p>
+<ul>
+<li><a href="/t/maturitni-otazky.pdf">seznam maturitních otázek</a></li>
+<li><a href="/t/prilohy.pdf">přílohy k maturitním otázkám</a></li>
+<li><a href="/t/zadani-maturitni-prace.pdf">zadání maturitní práce</a></li>
+</ul>
+<h3 id="finalni-otazky">finální otázky</h3>
+<dl class="otazky">
+    <div class="otazka">
+        <dt>1</dt>
+        <dd>
+            <strong>Datové typy a jejich reprezentace</strong><span>:</span>
+            <span class="otazky-temata"
+                >int, double, struktura, pole, objekt, ukazatel, serializace,
+                YAML, CSV</span
+            >
+        </dd>
+        <dd>
+            <strong>Webové technologie</strong><span>:</span>
+            <span class="otazky-temata"
+                >odkazy, MathML, stylování, skriptování, publikování, HTTP,
+                selektor, kaskáda, preprocesor, sémantika</span
+            >
+        </dd>
+    </div>
+
+    <div class="otazka">
+        <dt>2</dt>
+        <dd>
+            <strong>Databáze a SQL</strong><span>:</span>
+            <span class="otazky-temata"
+                >tabulka, záznamy, datové typy, primární a cizí (foreign) klíče,
+                index, SQL, SELECT, UPDATE &amp; DELETE, CREATE &amp; DROP</span
+            >
+        </dd>
+        <dd>
+            <strong>Hardware: periferie</strong><span>:</span>
+            <span class="otazky-temata">sběrnice, protokoly, USB</span>
+        </dd>
+    </div>
+
+    <div class="otazka">
+        <dt>3</dt>
+        <dd>
+            <strong>Nástroje pro spolupráci při programování</strong
+            ><span>:</span>
+            <span class="otazky-temata">mailing-list, Trac, Bugzilla, …</span>
+        </dd>
+        <dd>
+            <strong>Zpracování aritmetického výrazu</strong><span>:</span>
+            <span class="otazky-temata"
+                >lexer, parser, infixový a postfixový zápis, AST, CFG</span
+            >
+        </dd>
+    </div>
+
+    <div class="otazka">
+        <dt>4</dt>
+        <dd>
+            <strong>Síťová komunikace</strong><span>:</span>
+            <span class="otazky-temata"
+                >internet, TCP/IP, spolehlivost, adresování, socket</span
+            >
+        </dd>
+        <dd>
+            <strong>Textový procesor</strong><span>:</span>
+            <span class="otazky-temata">styly, ODT, LibreOffice</span>
+        </dd>
+    </div>
+
+    <div class="otazka">
+        <dt>5</dt>
+        <dd>
+            <strong>Adresování na Internetu</strong><span>:</span>
+            <span class="otazky-temata"
+                >IP &amp; MAC adresa, port, proxy server, DNS, router,
+                switch</span
+            >
+        </dd>
+        <dd>
+            <strong>Hardware: úložná zařízení</strong><span>:</span>
+            <span class="otazky-temata"
+                >HDD, SSD, CD, kapacita-rychlost-cena</span
+            >
+        </dd>
+    </div>
+
+    <div class="otazka">
+        <dt>6</dt>
+        <dd>
+            <strong>Počítačová grafika a barevné modely</strong><span>:</span>
+            <span class="otazky-temata"
+                >barevné modely, princip uložení, BMP, PNG, JPEG, GIF, ODG,
+                SVG</span
+            >
+        </dd>
+        <dd>
+            <strong>Modulární programování</strong><span>:</span>
+            <span class="otazky-temata"
+                >knihovna, API, ABI, verzování knihoven, linker</span
+            >
+        </dd>
+    </div>
+
+    <div class="otazka">
+        <dt>7</dt>
+        <dd>
+            <strong>Programovací jazyky</strong><span>:</span>
+            <span class="otazky-temata"
+                >překladač, interpret, JIT, garbage collector</span
+            >
+        </dd>
+        <dd>
+            <strong>Alternativní textové formáty</strong><span>:</span>
+            <span class="otazky-temata">Markdown &amp; PanDoc, LaTeX</span>
+        </dd>
+    </div>
+
+    <div class="otazka">
+        <dt>8</dt>
+        <dd>
+            <strong>Virtualizace a cloud</strong><span>:</span>
+            <span class="otazky-temata"
+                >virtualizace komponent (disk, síť, obrazovka),
+                infrastruktura/platforma/software jako služba
+                (IaaS/PaaS/Saas)</span
+            >
+        </dd>
+        <dd>
+            <strong>Historie hardware a software</strong><span>:</span>
+            <span class="otazky-temata"
+                >relé, elektronky, děrné štítky, vícejádrové procesory, cloud,
+                vzdálený přístup, internet</span
+            >
+        </dd>
+    </div>
+
+    <div class="otazka">
+        <dt>9</dt>
+        <dd>
+            <strong>Verzovací systémy</strong><span>:</span>
+            <span class="otazky-temata"
+                >revize, větev, repozitář, klon, fork, Git, Subversion</span
+            >
+        </dd>
+        <dd>
+            <strong>Číselné soustavy</strong><span>:</span>
+            <span class="otazky-temata">Hornerovo schéma, převody</span>
+        </dd>
+    </div>
+
+    <div class="otazka">
+        <dt>10</dt>
+        <dd>
+            <strong>Kryptografie a ochrana informací</strong><span>:</span>
+            <span class="otazky-temata"
+                >symetrické a asymetrické šifry, RSA, one-time pad,
+                steganografie, solení (salt) hesel</span
+            >
+        </dd>
+        <dd>
+            <strong>Testování softwaru</strong><span>:</span>
+            <span class="otazky-temata"
+                >unit testing, pokrytí kódu, druhy testů (funkční, výkonnostní,
+                systémové, …), JUnit</span
+            >
+        </dd>
+    </div>
+
+    <div class="otazka">
+        <dt>11</dt>
+        <dd>
+            <strong>Multimedia a jejich prezentace</strong><span>:</span>
+            <span class="otazky-temata"
+                >kontejner, kodek, DVD, AVI, MP3, stopa, titulky, VGA, HDMI, DAC
+                (D/A převodník)</span
+            >
+        </dd>
+        <dd>
+            <strong>Základy objektově orientovaného programování</strong
+            ><span>:</span>
+            <span class="otazky-temata"
+                >zapouzdření, dědičnost, polymorfismus, rozhraní, emulace bez
+                podpory překladače</span
+            >
+        </dd>
+    </div>
+
+    <div class="otazka">
+        <dt>12</dt>
+        <dd>
+            <strong>Správa a zabezpečení počítačových systémů</strong
+            ><span>:</span>
+            <span class="otazky-temata"
+                >VNC a SSH, firewall, aktualizace, hesla</span
+            >
+        </dd>
+        <dd>
+            <strong>Publikování na webu</strong><span>:</span>
+            <span class="otazky-temata">protokoly, typy hostingů</span>
+        </dd>
+    </div>
+
+    <div class="otazka">
+        <dt>13</dt>
+        <dd>
+            <strong>Prohledávání do hloubky a do šířky</strong><span>:</span>
+            <span class="otazky-temata"
+                >nalezení nejkratší cesty, průchod bludištěm, stavový
+                prostor</span
+            >
+        </dd>
+        <dd>
+            <strong>Dávkové úlohy (práce v příkazové řádce)</strong
+            ><span>:</span>
+            <span class="otazky-temata">Bash, cURL, grep, sed</span>
+        </dd>
+    </div>
+
+    <div class="otazka">
+        <dt>14</dt>
+        <dd>
+            <strong>E-mail a instant messaging</strong><span>:</span>
+            <span class="otazky-temata"
+                >protokoly, formát zpráv, SMTP, POP3, IMAP</span
+            >
+        </dd>
+        <dd>
+            <strong>Algoritmy třídění</strong><span>:</span>
+            <span class="otazky-temata"
+                >bubble-sort, insertion-sort, quick-sort, složitost</span
+            >
+        </dd>
+    </div>
+
+    <div class="otazka">
+        <dt>15</dt>
+        <dd>
+            <strong>Licencování softwaru a otevřený software</strong
+            ><span>:</span>
+            <span class="otazky-temata"
+                >placený software, shareware, freeware, open source, GPL, BSD,
+                CC, MIT</span
+            >
+        </dd>
+        <dd>
+            <strong>Specializované programovací jazyky</strong><span>:</span>
+            <span class="otazky-temata"
+                >XSLT, R, JavaScript, shell, regulární výrazy, LaTeX</span
+            >
+        </dd>
+    </div>
+
+    <div class="otazka">
+        <dt>16</dt>
+        <dd>
+            <strong>Hardware: CPU, paměť a architektura počítače</strong
+            ><span>:</span>
+            <span class="otazky-temata"
+                >registry, cache, instrukční sada, jádra a vlákna,
+                motherboard</span
+            >
+        </dd>
+        <dd>
+            <strong>Typografie</strong><span>:</span>
+            <span class="otazky-temata"
+                >font, slitky, kerning, vdova, sirotek</span
+            >
+        </dd>
+    </div>
+
+    <div class="otazka">
+        <dt>17</dt>
+        <dd>
+            <strong>Operační systémy a ovladače</strong><span>:</span>
+            <span class="otazky-temata"
+                >souběh programů, ovladače, multitasking, uživatelské
+                rozhraní</span
+            >
+        </dd>
+        <dd>
+            <strong>Uživatelská rozhraní a UX design</strong><span>:</span>
+            <span class="otazky-temata"
+                >UX, uživatelské rozhraní, přístupnost</span
+            >
+        </dd>
+    </div>
+
+    <div class="otazka">
+        <dt>18</dt>
+        <dd>
+            <strong>Grafy</strong><span>:</span>
+            <span class="otazky-temata"
+                >graf, stupeň, posloupnosti vrcholů, strom, grafové
+                algoritmy</span
+            >
+        </dd>
+        <dd>
+            <strong>Překladače a řízení překladu</strong><span>:</span>
+            <span class="otazky-temata"
+                >front-end a back-end překladače, mezikód (bajtkód), make,
+                npm</span
+            >
+        </dd>
+    </div>
+
+    <div class="otazka">
+        <dt>19</dt>
+        <dd>
+            <strong>Dynamické datové struktury</strong><span>:</span>
+            <span class="otazky-temata"
+                >binární strom, spojový seznam, paměťová náročnost</span
+            >
+        </dd>
+        <dd>
+            <strong>Nízkoúrovňové systémy a logika</strong><span>:</span>
+            <span class="otazky-temata"
+                >hradlo, množina, logický obvod, mikrokontroler</span
+            >
+        </dd>
+    </div>
+
+    <div class="otazka">
+        <dt>20</dt>
+        <dd>
+            <strong>3D tisk a CAD programy</strong><span>:</span>
+            <span class="otazky-temata"
+                >FDM, SLA, SLS, materiály, troubleshooting tisku,
+                modelování</span
+            >
+        </dd>
+        <dd>
+            <strong>Znak, řetězec a lokalizace</strong><span>:</span>
+            <span class="otazky-temata"
+                >znakové sady, UTF, internacionalizace vs lokalizace,
+                gettext</span
+            >
+        </dd>
+    </div>
+</dl>
+</section>
+</main>
+
+
+  <script
+    type="text/javascript"
+    src="https://progalej.cz/elasticlunr.min.js"
+  ></script>
+  <script type="text/javascript" src="https://progalej.cz/search.js"></script>
+</body>
+</html>
