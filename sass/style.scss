@@ -14,9 +14,29 @@ pre, code, code * {
     font-size: 1rem;
 }
 
+sup.footnote-reference {
+    a {
+        font-size: 1rem;
+    }
+}
+
+code {
+    background-color: #fff9e6;
+    color: rgb(49, 49, 49);
+    padding: .1em .2em;
+    vertical-align: 0.02em;
+}
+
 pre {
     padding: .5rem 1rem;
     margin: .5rem 0;
+
+    code {
+        background-color: unset;
+        color: unset;
+        padding: unset;
+        vertical-align: unset;
+    }
 
     table,
     th,

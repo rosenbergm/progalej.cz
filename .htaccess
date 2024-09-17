@@ -1,0 +1,11 @@
+RewriteEngine On
+
+# Redirect pg.alej.cz to progalej.cz/pg
+
+RewriteCond %{HTTP_HOST} ^pg\.alej\.cz$ [NC]
+RewriteRule ^(.\*)$ https://progalej.cz/pg/$1 [L,R=302]
+
+# Redirect pgu.alej.cz to progalej.cz/pgu
+
+RewriteCond %{HTTP_HOST} ^pgu\.alej\.cz$ [NC]
+RewriteRule ^(.\*)$ https://progalej.cz/pgu/$1 [L,R=302]
