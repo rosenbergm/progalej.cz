@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="cs">
+
+<head>
+  <meta charset="utf-8">
+  <title>Formulář, HTTP a DNS -
+progalej.cz</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="/style.css">
+
+  <meta name="description"
+    content="Informace a poznámky k seminářům progamování na Gymnáziu nad Alejí" />
+  <meta property="og:title" content="Programování - Gymnázium nad Alejí" />
+  <meta property="og:description"
+    content="Informace a poznámky k seminářům progamování na Gymnáziu nad Alejí" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://progalej.cz" />
+</head>
+
+<body >
+  
+<main class="col">
+  <section class="small">
+    <a href="/pg">← zpět</a>
+    <h1>Formulář, HTTP a DNS</h1>
+    <p><time datetime="2024-09-19">2024-09-19</time></p>
+  </section>
+  <section>
+    
+    <ul>
+      
+      <li>
+        <a href="https://progalej.cz/pg/03/#lekce-3">Lekce 3</a>
+        
+        <ul>
+          
+          <li>
+            <a href="https://progalej.cz/pg/03/#ulohy">Úlohy</a>
+          </li>
+          
+          <li>
+            <a href="https://progalej.cz/pg/03/#co-jsme-probrali">Co jsme probrali</a>
+          </li>
+          
+        </ul>
+        
+      </li>
+      
+    </ul>
+    
+  </section>
+  <section><h1 id="lekce-3">Lekce 3</h1>
+<h2 id="ulohy">Úlohy</h2>
+<p>Dnes nejsou :-)</p>
+<h2 id="co-jsme-probrali">Co jsme probrali</h2>
+<ul>
+<li>Napojení formuláře na API
+<ul>
+<li>Co to je API?
+<ul>
+<li>Prostředek pro komunikaci mezi dvěma stroji (většinou klient-server) pomocí nějakých předem daných pravidel</li>
+<li>Je na něm více endpointů, tedy takových "funkcí" nebo "procedur"</li>
+</ul>
+</li>
+<li>Ve <code>form</code> elementu pomocí atributů <code>method</code>, který určuje HTTP metodu a <code>action</code>, do které se píše adresa kam se mají data odeslat</li>
+</ul>
+</li>
+<li>Komunikace na internetu
+<ul>
+<li>Založená na klient-server architektuře (HTTP)
+<ul>
+<li>Jaký je rozdíl? Adresu serveru známe, klienta před navázáním spojení ne</li>
+<li>Klient posílá požadavky, server na ně odpovídá</li>
+</ul>
+</li>
+<li>Pro webové stránky se používá protokol HTTP
+<ul>
+<li>Několik verzí, verze 1 textová, od 2 už binární data</li>
+</ul>
+</li>
+<li>Klient pošle požadavek (request) na server, server odpoví odpovědí (response)
+<ul>
+<li>Request i response mají hlavičky, některé i tělo s daty
+<ul>
+<li>Součástí jsou hlavičky (headers), které např. popisují typ obsahu a další.</li>
+</ul>
+</li>
+<li>Rozlišujeme několik druhů requestů, GET, POST, PUT, PATCH,...</li>
+<li>Response
+<ul>
+<li><em>Status kód</em> je číslo popisující, zdali byl požadavek úspěšný.</li>
+<li>2xx pro úspěch, 3xx pro přesměrování, 4xx pro chybu na straně klienta, 5xx pro chybu na straně serveru.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Kde co na internetu je?
+<ul>
+<li>Používáme URL (uniform resource locator), případně abstrakce je URI (uniform resource identifier)
+<ul>
+<li>URL pouze pro internet, URI používaná pro více věcí</li>
+<li>Má <a rel="noopener" target="_blank" href="https://media.geeksforgeeks.org/wp-content/uploads/20210625160610/urldiag.PNG">standard</a></li>
+</ul>
+</li>
+<li>Server je na síti dohledatelný pomocí IP adresy
+<ul>
+<li>verze IPv4 (čtyři krát osm bitů, tedy 32 bitů, tedy 2^32, 4.3 miliardy adresovatelných počítačů) a IPv6 (8 krát 16 bitů, tedy 128 bitů, tedy 2^128, 3,4*10^38 adresovatelných počítačů)</li>
+<li>Když známe IP adresu počítače, můžeme s ním komunikovat (pokud on ale zrovna chce)</li>
+<li>Adresa musí být tzv. veřejná (pevná), je jich málo, platí se za ně, vyřešila by to implementace IPv6
+<ul>
+<li>To je důvod, proč nemůžete ze školy např. komunikovat s webserverem, který vám běží doma na počítači (pokud nemáte pevnou IP adresu)</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Nechceme si ale pamatovat IP adresy, chceme domény
+<ul>
+<li>Formát domény, subdoména, doménové jméno, doména nejvyššího řádu</li>
+<li>Domény se na IP adresy překládají, slouží k tomu protokol DNS</li>
+</ul>
+</li>
+<li>DNS
+<ul>
+<li>Internet pracuje s číselnými IP adresami, které jsou (u veřejných serverů) organizované podle lokality, takže jde poznat, kam se má packet letící internetem vydat dále.</li>
+<li>Oproti tomu doména na lokalitě moc nezáleží (.com může být kdekoli ve světě).</li>
+<li>Proto musíme přeložit doménu na IP adresu. K tomu slouží DNS.</li>
+<li>Zeptám se <em>rekurzivního</em> serveru (který typicky patří mému poskytovateli internetu), ten se postupně vyptává <em>autoritativních</em> serverů.</li>
+<li>Postupuje od domény nejvyššího řádu, vždy se zeptá na IP adresu serveru, který má zodpovědnost za další doménu v pořadí.</li>
+<li>Rekurzivní server si informace <em>cachuje</em>, aby nemusel každou minutu dotazy opakovat.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</section>
+</main>
+
+
+  <script
+    type="text/javascript"
+    src="https://progalej.cz/elasticlunr.min.js"
+  ></script>
+  <script type="text/javascript" src="https://progalej.cz/search.js"></script>
+</body>
+</html>
