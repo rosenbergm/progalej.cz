@@ -71,6 +71,8 @@ pre table td {
 pre table td:nth-of-type(1) {
   text-align: center;
   user-select: none;
+
+  padding: 0 1rem;
 }
 pre mark {
   /* If you want your highlights to take the full width */
