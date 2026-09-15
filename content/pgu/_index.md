@@ -5,40 +5,59 @@ template = "class.html"
 page_template = "lesson.html"
 +++
 
-## prerekvizity
+## Prerekvizity
 
-**nejsou**. jen chuť se učit o informatice a věcech spojených s ní.
-ani znalost pokročilé matematiky (ve smyslu "tuším, co to je derivace") není potřeba, to se vše naučíte (případně naučíme).
+**Nejsou**. Jen chuť se učit o informatice a věcech spojených s ní. Ani znalost
+pokročilé matematiky (ve smyslu "tuším, co to je derivace") není potřeba, to se
+vše naučíte (případně naučíme).
 
-## požadavky na úspěšné zakončení předmětu
+## Požadavky na úspěšné zakončení předmětu
 
-platí společná pravidla napsaná [zde](/teaching). podtrženo
+Platí společná pravidla napsaná [zde](/teaching). Podtrženo
 sečteno musíte splnit následující:
 
-- získat **alespoň 50 % bodů** (známkování naleznete [zde](/teaching))
-- **ne**podvádět, protože to vám může vysloužit (N) na vysvědčení. nedělějte to, s rodiči se mi to nechce řešit.
-- napsat malilililinkatý [program](#zapoctovy-programek), který odevzdáte do konce **dubna**.
+- Získat **alespoň 50 % bodů** (známkování naleznete [zde](/))
+- **Ne**podvádět, protože to vám může vysloužit (N) na vysvědčení. Nedělějte to,
+  s rodiči se mi to nechce řešit.
+- Napsat malinkatý [program](#zapoctovy-programek).
 
-### kalendář důležitých událostí
+Během roku budete řešit úlohy, nejčastěji ve formě domácí práce. Bude také
+zadáno pár úloh, které mi budete muset všichni odprezentovat. Projdeme si spolu
+váš kód, vy mi ho vysvětlíte a ukážete, jak a proč funguje. Podobně bude
+fungovat odevzdávání domácích úkolů, kde vždy náhodně vyberu dva nebo tři z vás,
+abyste mi vaše řešení vysvětlili. Toto opatření nezavádím rád, protože krátím o
+čas mě i vás, ale vzhledem k nadměrnému užívání generativního AI a velkých
+jazykových modelů je to nutné.
 
-| Datum     | Událost |
-|-----------|---------|
-| 2. září   | Začátek školního roku |
-| 31. ledna | Schválené téma zápočtového programu |
-| 30. dubna | Odevzdaný zápočtový program |
+## Užitečné odkazy
 
-## zápočtový prográmek
+- [Python kurz (můj)](https://python.progalej.cz/)
+- [Python kurz (PyLadies)](https://naucse.python.cz/course/pyladies/)
 
-pro úspěšné splnění semináře PgU potřebujete napsat malý prográmek s dokumentací, který ke konci školního roku budete
-odevzdávat. nebojte se, vím, že na seminář budou chodi i tací, kteří nemají
-velké zkušenosti s programováním a jsem si jistý, že to zvládnete všichni.
+### Kalendář důležitých událostí
 
-postup je následující. vyberete si téma (sami nebo se inspirujete), napíšete mi nebo se pobavíme po hodině, já vám ho schválím a začnete pracovat. výběr tématu má deadline **konec ledna**, odevzdání **konec dubna**.
+| Datum                 | Událost                             |
+| --------------------- | ----------------------------------- |
+| 1. září               | Začátek školního roku               |
+| konec dubna           | Schválené téma zápočtového programu |
+| polovina května       | Odevzdaný projekt - webové stránky  |
+| první polovina června | Odevzdaný zápočtový program         |
 
-### způsob odevzdání
+## Zápočtový prográmek
+
+Pro úspěšné splnění semináře PgU potřebujete napsat malý prográmek s
+dokumentací, který ke konci školního roku budete odevzdávat. Nebojte se, vím, že
+na seminář budou chodi i tací, kteří nemají velké zkušenosti s programováním a
+jsem si jistý, že to zvládnete všichni.
+
+Postup je následující. Vyberete si téma (sami nebo se inspirujete), napíšete mi
+nebo se pobavíme po hodině, já vám ho schválím a začnete pracovat. Výběr tématu
+má deadline **konec dubna**, odevzdání **polovina června**.
+
+<!-- ### způsob odevzdání
 
 TBD.
 
 ### témata pro inspiraci
 
-TBD.
+TBD. -->

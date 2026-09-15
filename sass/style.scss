@@ -1,17 +1,36 @@
 * {
-    font-family: "Archivo", sans-serif;
+    /* font-family: "Archivo", sans-serif; */
+    /* font-family: "EB Garamond", sans-serif; */
+    font-family: "Atkinson Hyperlegible Next", sans-serif;
     font-optical-sizing: auto;
     font-weight: normal;
     font-style: normal;
-    font-variation-settings: "wdth" 100;
+    font-size-adjust: 0.53;
+    /* font-variation-settings: "wdth" 100; */
 
     box-sizing: border-box;
 }
 
-pre, code, code * {
-    font-family: "JetBrains Mono", monospace;
+hr {
+    width: 100%;
+    height: 1px;
+}
 
-    font-size: 1rem;
+span.katex * {
+    font-family: unset;
+    font-optical-sizing: unset;
+    font-weight: unset;
+    font-style: unset;
+    font-variation-settings: unset;
+}
+
+pre,
+code,
+code * {
+    /* font-family: "JetBrains Mono", monospace; */
+    font-family: "IBM Plex Mono", monospace;
+
+    font-size: 0.9375rem;
 }
 
 sup.footnote-reference {
@@ -22,14 +41,17 @@ sup.footnote-reference {
 
 code {
     background-color: #fff9e6;
-    color: rgb(49, 49, 49);
-    padding: .1em .2em;
+    /* color: rgb(49, 49, 49); */
+    color: #000;
+    padding: 0.1em 0.2em;
     vertical-align: 0.02em;
 }
 
 pre {
-    padding: .5rem 1rem;
-    margin: .5rem 0;
+    padding: 0.5rem 1rem;
+    margin: 0.5rem 0;
+
+    background-color: #fff9e6;
 
     code {
         background-color: unset;
@@ -57,32 +79,37 @@ pre {
 }
 
 pre {
-  padding: 1rem;
-  overflow: auto;
+    padding: 1rem;
+    overflow: auto;
 }
 /* The line numbers already provide some kind of left/right padding */
 pre[data-linenos] {
-  padding: 1rem 0;
+    padding: 1rem 0;
 }
 pre table td {
-  padding: 0;
+    padding: 0;
 }
 /* The line number cells */
 pre table td:nth-of-type(1) {
-  text-align: center;
-  user-select: none;
+    text-align: right;
+    user-select: none;
 
-  padding: 0 1rem;
+    border-right: 1px solid #000;
+
+    padding-right: 0.5rem;
+}
+pre table td:nth-of-type(2) {
+    padding-left: 1rem;
 }
 pre mark {
-  /* If you want your highlights to take the full width */
-  display: block;
-  /* The default background colour of a mark is bright yellow */
-  background-color: rgba(254, 252, 232, 0.9);
+    /* If you want your highlights to take the full width */
+    display: block;
+    /* The default background colour of a mark is bright yellow */
+    background-color: rgba(254, 252, 232, 0.9);
 }
 pre table {
-  width: 100%;
-  border-collapse: collapse;
+    width: 100%;
+    border-collapse: collapse;
 }
 
 b,
@@ -91,6 +118,10 @@ strong {
 }
 
 i {
+    font-style: italic;
+}
+
+em {
     font-style: italic;
 }
 
@@ -108,6 +139,7 @@ body {
     min-height: 100%;
 
     background: #fff;
+    background: #fafafa;
 
     display: grid;
     // align-items: center;
@@ -154,8 +186,19 @@ main {
         letter-spacing: -0.02em;
     }
 
+    h4 {
+        margin: 0;
+        line-height: 0;
+
+        font-weight: bolder;
+        font-size: 1.2rem;
+        line-height: 100%;
+        letter-spacing: -0.02em;
+    }
+
     p {
-        letter-spacing: 0.03em;
+        /* letter-spacing: 0.03em; */
+        hyphens: auto;
         font-size: 1rem;
 
         text-align: justify;
@@ -209,8 +252,8 @@ main.col {
     }
 
     ul {
-        font-size: 1.2rem;
-        line-height: 120%;
+        /* font-size: 1.2rem;
+        line-height: 120%; */
     }
 
     main dl,
@@ -262,7 +305,7 @@ a:hover {
     color: #000;
 }
 
-article {
+/* article {
     p {
         letter-spacing: 0.01em;
         font-size: 1.2rem;
@@ -283,7 +326,7 @@ article {
     h3 {
         margin: 1rem 0 0.6rem;
     }
-}
+} */
 
 section.cv {
     p {
@@ -294,6 +337,9 @@ section.cv {
 ul {
     margin: 0 0 0 1rem;
     padding: 0;
+
+    font-size: 1.2rem;
+    line-height: 1.25rem;
 }
 
 time {
@@ -351,6 +397,8 @@ time {
             height: 100%;
             width: 100%;
 
+            font-family: "Work Sans", sans-serif;
+
             display: inline-flex;
             align-items: center;
             justify-content: center;
@@ -373,6 +421,7 @@ td {
 }
 
 table {
+    margin-top: 1rem;
     border-collapse: collapse;
 }
 
@@ -394,57 +443,62 @@ td {
 }
 
 .search-container {
-  display: inline-block;
-  position: relative;
-  width: 100%;
-
-  input {
+    display: inline-block;
+    position: relative;
     width: 100%;
-    padding: 0.5rem;
 
-    border: 1px solid black;
+    background: #fafafa;
 
-    font-size: 1rem;
-    letter-spacing: 0.03em;
-    font-weight: 400;
-  }
+    input {
+        width: 100%;
+        padding: 0.5rem;
+
+        background: #fafafa;
+        border: 1px solid black;
+
+        font-family: "Work Sans", sans-serif;
+
+        font-size: 1rem;
+        letter-spacing: 0.03em;
+        font-weight: 400;
+    }
 }
 
 .search-results {
-  display: none;
-  position: absolute;
-  background: white;
-  color: black;
-  padding: 1rem;
-  box-shadow: 2px 2px 2px 0 rgba(0, 0, 0, 0.5);
-  max-height: 500px;
-  overflow: auto;
-  width: 100%;
-  right: 0;
+    display: none;
+    position: absolute;
+    background: white;
+    color: black;
+    padding: 1rem;
+    box-shadow: 2px 2px 2px 0 rgba(0, 0, 0, 0.5);
+    max-height: 500px;
+    overflow: auto;
+    width: 100%;
+    right: 0;
 
-  &__items {
-    list-style: none;
-  }
-
-  li {
-    margin-top: 1rem;
-    border-bottom: 1px solid #ccc;
-    font-size: 1rem;
-
-    &:first-of-type {
-      margin-top: 0;
+    &__items {
+        list-style: none;
     }
-  }
 
-  &__item {
-    margin-bottom: 1rem;
+    li {
+        margin-top: 1rem;
+        border-bottom: 1px solid #ccc;
+        font-size: 1rem;
 
-    a {
-      font-size: 1.2rem;
-      display: inline-block;
-      margin-bottom: 0.5rem;
+        &:first-of-type {
+            margin-top: 0;
+        }
     }
-  }
+
+    &__item {
+        margin-bottom: 1rem;
+
+        a {
+            font-size: 1.2rem;
+            display: inline-block;
+            margin-bottom: 0.5rem;
+        }
+    }
 }
 
 .page-header-search {
@@ -477,4 +531,116 @@ td {
             width: 150%;
         }
     }
+}
+
+main {
+    section {
+        /* gap: 1rem; */
+        gap: 0;
+
+        a,
+        p {
+            font-weight: 400;
+            font-size: 1.2rem;
+            line-height: 1.5rem;
+            /* line-height: 1.55; */
+        }
+
+        p {
+            /* margin-top: 1rem; */
+            margin: 0.4em 0;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4 {
+            font-family: "Work Sans", sans-serif;
+            margin-top: 1.25rem;
+            margin-bottom: 0.2rem;
+            /* margin-bottom: 0.5rem; */
+        }
+
+        h1 {
+            font-size: 2.125rem;
+            line-height: 1.2;
+            font-weight: 600;
+            letter-spacing: -0.015em;
+        }
+
+        h2 {
+            font-size: 1.625rem;
+            line-height: 1.3;
+            font-weight: 600;
+            letter-spacing: -0.01em;
+        }
+
+        h3 {
+            font-size: 1.3125rem;
+            line-height: 1.4;
+            font-weight: 600;
+        }
+
+        h4 {
+            font-size: 1.125rem;
+            line-height: 1.45;
+            font-weight: 600;
+        }
+
+        ul {
+            margin-top: 1rem;
+            margin-bottom: 1rem;
+
+            li {
+                line-height: 1.5rem;
+            }
+
+            ul {
+                margin-top: 0;
+                margin-bottom: 0;
+            }
+        }
+    }
+}
+
+.otazky {
+    text-align: justify;
+
+    dl,
+    dt,
+    dd {
+        font-size: 1.2rem;
+        line-height: 1.5rem;
+    }
+}
+
+pre {
+    table {
+        margin: 0;
+    }
+}
+
+blockquote {
+    border-left: 4px solid #000;
+    margin: 0;
+    padding: 0.5em 0;
+    padding-left: 1.5em;
+    margin: 0.25em 0;
+}
+
+.giallo-ln {
+    user-select: none;
+    margin-right: 0.4em;
+    padding: 0.4em;
+    min-width: 3ch;
+    text-align: right;
+    opacity: 0.8;
+}
+
+.done strong {
+    background-color: #d4edda;
+}
+
+.seen strong {
+    background-color: #ffa500;
 }

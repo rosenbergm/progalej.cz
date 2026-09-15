@@ -1,0 +1,42 @@
+{% extends "base.html" %} {%block title%}{{ section.title }} -
+progalej.cz{%endblock%} {% block content %}
+<main class="col">
+    <section class="small">
+        <div class="page-header-search">
+            <a href="/">← zpět</a>
+
+            <div class="search-container">
+                <input id="search" type="search" placeholder="🔎 Hledat" />
+
+                <div class="search-results">
+                    <div class="search-results__items"></div>
+                </div>
+            </div>
+        </div>
+        <h1 class="title">{{ section.title }}</h1>
+    </section>
+    <section>
+        <ul>
+            {% for page in section.pages %}
+            <li class="pagelink">
+                <time datetime="{{ page.date }}">{{ page.date }}</time>&nbsp;
+                <a href="{{ page.permalink | safe }}">
+                    Lekce {{ page.extra.lesson }} — {{ page.title }}
+                </a>
+            </li>
+            {% endfor %}
+        </ul>
+    </section>
+    <section class="button-container">
+        <button>
+            <a href="{{ current_path }}pgu"> PgU (začátečníci) </a>
+        </button>
+        <button>
+            <a href="{{ current_path }}pg"> Pg (pokročilí) </a>
+        </button>
+    </section>
+    <article>
+        <section>{{ section.content | safe }}</section>
+    </article>
+</main>
+{% endblock content %}

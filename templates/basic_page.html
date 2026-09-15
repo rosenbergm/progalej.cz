@@ -1,0 +1,17 @@
+
+{% extends "base.html" %}
+{%block title%}{{ page.title }} - progalej.cz{%endblock%}
+{% block head %}
+{% if page.extra.katex %}
+{{ <katex/> }}
+{% endif %}
+{% endblock head %}
+{% block content %}
+<main class="col">
+  <section class="small">
+    <a href="/matika">← zpět</a>
+    <h1>{{ page.title }}</h1>
+  </section>
+  <section>{{ page.content | safe }}</section>
+</main>
+{% endblock content %}

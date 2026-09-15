@@ -1,0 +1,13 @@
+disable = []
+exclude = []
+respect-gitignore = true
+cache = true
+
+[MD004]
+style = "dash"
+
+[MD013]
+line-length = 120
+code_blocks = false
+reflow = true
+reflow-mode = "default"

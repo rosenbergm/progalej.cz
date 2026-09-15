@@ -1,2 +1,5 @@
 name = "progalej.cz"
+server = "main"
+directory = "progalej.cz"
 output_dir = "dist"
+build_command = "zola build -o dist --force"

@@ -1,5 +1,11 @@
-{% extends "base.html" %} {%block title%}{{ page.title }} -
-progalej.cz{%endblock%} {% block content %}
+{% extends "base.html" %}
+{%block title%}{{ page.title }} - progalej.cz{%endblock%}
+{% block head %}
+{% if page.extra.katex %}
+{{ <katex/> }}
+{% endif %}
+{% endblock head %}
+{% block content %}
 <main class="col">
   <section class="small">
     <a href="/{{ page.extra.parent }}">← zpět</a>
@@ -17,6 +23,15 @@ progalej.cz{%endblock%} {% block content %}
           {% for h2 in h1.children %}
           <li>
             <a href="{{ h2.permalink | safe }}">{{ h2.title }}</a>
+            {% if h2.children %}
+            <ul>
+                {% for h3 in h2.children %}
+                <li>
+                <a href="{{ h3.permalink | safe }}">{{ h3.title }}</a>
+                </li>
+                {% endfor %}
+            </ul>
+            {% endif %}
           </li>
           {% endfor %}
         </ul>
